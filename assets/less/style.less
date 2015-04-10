@@ -1,0 +1,128 @@
+// TYPOGRAPHY
+// --------------------------------
+@font-face {
+    font-family: SuperMario;
+    src: url('../fonts/SuperMario256.ttf');
+    font-weight: normal;
+}
+
+
+// VARIABLES
+// --------------------------------
+@font-family-mario: "SuperMario";
+@clrWhite: 			#FFFFFF;
+@clrBlack: 			#000000;
+@clrLightGray: 		#a4a4a4;
+
+
+// DEFAULT
+// --------------------------------
+body {
+	position: relative;
+}
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+// HEADER
+// --------------------------------
+header {
+	padding-bottom: 50px;
+	.logo {
+		display: inline-block;
+		img {
+			display: block;
+			width: 351px;
+			height: 107px;
+			margin: 15px 0 40px;
+		}
+	}
+	.main-menu {
+		ul {
+			li {
+				padding: 0 10px;
+				a {
+					font-family: @font-family-mario;
+					font-size: 1.5em;
+					color: @clrLightGray;
+					letter-spacing: 1px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// HOME
+// --------------------------------
+.categories {
+	.category {
+		margin-bottom: 30px;
+		text-align: center;
+		a {
+			img {
+				margin-bottom: 10px;
+			}
+			font-family: "Helvetica", Arial, sans-serif;
+			color: @clrBlack;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+
+// SIDEBAR
+// --------------------------------
+aside {
+	width: 0px;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.7);
+	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+	transition: width 1s;
+	z-index: 99999;
+	text-align: center;
+	&:hover {
+		width: 300px;
+	}
+	h3 {
+		color: @clrWhite;
+	}
+	button {
+		text-indent: -99999px;
+		background: url(../img/cart.png) no-repeat center center;
+		padding: 0;
+		border: none;
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		top: 50%;
+		margin-top: -25px;
+		left:-55px;
+	}
+	ul {
+		display: block;
+		position: relative;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		color: @clrWhite;
+		li {
+			input {
+				color: @clrBlack;
+				width: 40px;
+			}
+		}
+	}
+}
+
+
